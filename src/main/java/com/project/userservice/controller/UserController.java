@@ -35,7 +35,7 @@ public class UserController {
     public ResponseEntity<User> createUser(@RequestBody MultiValueMap<String, String> formdata){
         Map<String, String> d = formdata.toSingleValueMap();
         User user = userService.createUser(
-                new User(null, d.get("email"), d.get("username"), d.get("phone"), d.get("password"), d.get("birthdate"))
+                new User(null, d.get("email"), d.get(   "username"), d.get("phone"), d.get("password"), d.get("birthdate"))
         );
         return ResponseEntity.ok(user);
     }

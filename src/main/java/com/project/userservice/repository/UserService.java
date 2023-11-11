@@ -32,7 +32,7 @@ public class UserService {
     }
 
     public User createUser(User user){
-        return repository.save(user);
+        return repository.insert(user);
     }
 
     public User updateUser(User user){
